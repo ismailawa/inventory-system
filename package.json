@@ -1,0 +1,29 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "this is an inventory system build by the class for a friend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev-start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismailawa/inventory-system.git"
+  },
+  "keywords": [
+    "inventory",
+    "class",
+    "system",
+    "izala"
+  ],
+  "author": "the class",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ismailawa/inventory-system/issues"
+  },
+  "homepage": "https://github.com/ismailawa/inventory-system#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
