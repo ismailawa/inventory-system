@@ -4,27 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="../css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <td>Name</td>
-                    <td>Prise</td>
-                    <td>Quantity</td>
-                </tr>
-            </thead>
-            <tbody>
-                <% products.forEach((product) => {%>
+    <div class="main">
+
+        <h1>INVENTORY</h1>
+    
+        <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Add Product</a></li>
+              <li><a href="#">View Products</a></li>
+              <li style="float:right"><a href="/sales">Make Sales</a></li>
+        </ul>
+    
+        <div class="container">
+            <table>
+                <thead>
                     <tr>
-                        <td><%= product.name %></td>
-                        <td><%= product.prise %></td>
-                        <td><%= product.quantity %></td>
-                    </tr>  
-                <% }) %>
-            </tbody>
-        </table>
-    </div>
+                        <td>Name</td>
+                        <td>Prise</td>
+                    <   td>Quantity</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% products.forEach((product) => {%>
+                    <   tr>
+                            <td><%= product.name %></td>
+                            <td><%= product.prise %></td>
+                            <td><%= product.quantity %></td>
+                        </tr>  
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="footer">
+            copyright @Izala Production
+        </div>
+
+    </div>    
 </body>
 </html>
