@@ -13,24 +13,24 @@
         <h1>INVENTORY</h1>
     
         <ul>
-              <li><a href="index.html">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="#">Add Product</a></li>
               <li><a href="#">View Products</a></li>
               <li style="float:right"><a href="/sales">Make Sales</a></li>
         </ul>
     
-        <div class="container">
+        <div class="container" style="overflow-x:auto;">
             <table>
-                <thead>
-                    <tr>
-                        <td>Name</td>
-                        <td>Prise</td>
-                    <   td>Quantity</td>
-                    </tr>
-                </thead>
+                
+                <tr>
+                    <th>Name</th>
+                    <th>Prise</th>
+                    <th>Quantity</th>
+                </tr>
+            
                 <tbody>
                     <% products.forEach((product) => {%>
-                    <   tr>
+                        <tr>
                             <td><%= product.name %></td>
                             <td><%= product.prise %></td>
                             <td><%= product.quantity %></td>

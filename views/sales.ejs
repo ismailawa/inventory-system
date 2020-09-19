@@ -25,7 +25,9 @@
               <label>Product</label>
               <select>
                   <option>
-                      
+                    <option value="perfumes">Perfumes</option>
+                    <option value="earphones" selected>Earphones</option>
+                    <option value="lamps" >Lamps</option>
                   </option>
               </select> <br>
   
@@ -35,8 +37,8 @@
               <label>Amount</label>
               <input type="number" name="amount">
               <br> <br>
-  
-              <label>TOTAL: </label> 
+            
+                <label>TOTAL: <%= 'quantity' * 'amount' %> </label>
               <br> <br>
   
               <input type="submit" name="submit" value="SUBMIT" onclick="">
