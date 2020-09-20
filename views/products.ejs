@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-    <link rel="stylesheet" type="text/css" href="../css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="main">
 
-        <h1>INVENTORY</h1>
+        <%- include ("./includes/header") %>
     
         <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="#">Add Product</a></li>
+              <li><a href="/products/add">Add Product</a></li>
               <li><a href="#">View Products</a></li>
               <li style="float:right"><a href="/sales">Make Sales</a></li>
         </ul>
@@ -26,6 +25,7 @@
                     <th>Name</th>
                     <th>Prise</th>
                     <th>Quantity</th>
+                    <th>Actions</th>
                 </tr>
             
                 <tbody>
@@ -34,6 +34,12 @@
                             <td><%= product.name %></td>
                             <td><%= product.prise %></td>
                             <td><%= product.quantity %></td>
+                            
+                            <td>
+                                <a href="#">Edit</a>
+                                <a href="products/<%= product.name %>">Delete</a>
+                                
+                            </td>
                         </tr>  
                     <% }) %>
                 </tbody>

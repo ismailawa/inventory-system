@@ -13,12 +13,14 @@ const port = process.env.PORT || 3000;
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 app.use('/', index);
 app.use('/products', product);
 app.use('/sales', sales);
 
-app.use(express.static(path.join(__dirname, 'css')));
-app.use(express.static(path.join(__dirname, 'images')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('*', (req,res) => {
     res.render('error', {"title": "Error page"});
