@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
+    <%- include ("./includes/head") %>
 <body>
     <div class="main">
 
@@ -14,14 +9,15 @@
         <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/products/add">Add Product</a></li>
-              <li><a href="#">View Products</a></li>
-              <li style="float:right"><a href="/sales">Make Sales</a></li>
+              <li><a href="/sales">Make Sales</a></li>
+              <li style="float:right"><a href="/">Back</a></li>
         </ul>
     
         <div class="container" style="overflow-x:auto;">
             <table>
                 
                 <tr>
+                    <th>id</th>
                     <th>Name</th>
                     <th>Prise</th>
                     <th>Quantity</th>
@@ -31,13 +27,14 @@
                 <tbody>
                     <% products.forEach((product) => {%>
                         <tr>
+                            <td><%= product.id %></td>
                             <td><%= product.name %></td>
                             <td><%= product.prise %></td>
                             <td><%= product.quantity %></td>
                             
                             <td>
-                                <a href="#">Edit</a>
-                                <a href="products/<%= product.name %>">Delete</a>
+                                <a href="products/<%= product.id %>/edit">Edit</a>
+                                <a href="products/<%= product.id %>">Delete</a>
                                 
                             </td>
                         </tr>  

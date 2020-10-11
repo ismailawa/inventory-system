@@ -15,12 +15,12 @@ app.set("view engine", "ejs");
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/products', product);
 app.use('/sales', sales);
 
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('*', (req,res) => {
     res.render('error', {"title": "Error page"});

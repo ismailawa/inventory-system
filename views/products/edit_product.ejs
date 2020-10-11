@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../includes/head") %>
+<body>
+    <div class="main">
+
+        <%- include ("../includes/header") %>
+
+        <div class="container">
+
+            <form action="/products/update" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="hidden" name="id" value=<%= product.id %>>
+                </div>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input class="form-control" type="text" name="name" value="<%= product.name %>"> 
+                </div>
+                <div class="form-group">
+                    <label for="">Price</label>
+                    <input class="form-control" type="number" name="prise" value="<%= product.prise %>">
+                </div>
+                
+                <div class="form-group">
+                    <label for="">Quantity</label>
+                    <input class="form-control"type="number" name="quantity" value="<%= product.quantity %>">
+                </div>
+                
+                
+    
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="edit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
